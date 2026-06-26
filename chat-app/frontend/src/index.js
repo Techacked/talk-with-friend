@@ -6,6 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import ChatProvider from "./Context/ChatProvider";
 import { BrowserRouter } from "react-router-dom";
+import axios from "axios";
+
+// Configure axios base URL for production builds. Set REACT_APP_API_URL during build/deploy.
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || "";
 
 const theme = extendTheme({
   config: {
