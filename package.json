@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "cd chat-app && npm run server",
+    "start": "cd chat-app && npm start",
     "build": "cd chat-app/frontend && npm install --legacy-peer-deps && npm run build",
-    "dev": "cd chat-app && npm run server"
+    "dev": "cd chat-app && npm run server",
+    "postinstall": "cd chat-app && npm install --legacy-peer-deps"
   }
 }
